@@ -24,7 +24,7 @@ public class NavScript : MonoBehaviour
     // Start is called before the first frame update
     void Start() {
         agent = GetComponent<NavMeshAgent>();
-        agent.speed = 2;
+        agent.speed = 1;
         for (int i = 0; i <= PatrolPoints.Length; i++)
         {
             Debug.Log("initializing patrol points" + i);
@@ -51,7 +51,7 @@ public class NavScript : MonoBehaviour
                 if (searchTimer <= 0)
                 {
                     state = "Patrol";
-                    agent.speed = 4;
+                    agent.speed = 1;
                 }
                 Search();
                 break;
